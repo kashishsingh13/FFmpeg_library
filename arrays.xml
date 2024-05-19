@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="initial_slider_values">
+        <item>0.0</item> <!-- Initial starting value -->
+        <item>300.0</item> <!-- Initial ending value -->
+    </array>
+</resources>
