@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AudioTrimActivity"
+    tools:ignore="MissingClass">
+
+    <Button
+        android:id="@+id/select_audio_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Audio" />
+
+    <TextView
+        android:id="@+id/audio_path_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="No audio selected"
+        android:textSize="16sp" />
+
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/time_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:valueFrom="0"
+        app:values="@array/initial_slider_values"
+        android:valueTo="300" />
+
+    <Button
+        android:id="@+id/trim_audio_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Trim Audio" />
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Video.TrimVideoActivity">
+
+    <VideoView
+        android:id="@+id/video"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/select_video_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Video" />
+
+    <TextView
+        android:id="@+id/video_path_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="No video selected"
+        android:textSize="16sp" />
+
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/time_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:valueFrom="0"
+        app:values="@array/initial_slider_values"
+        android:valueTo="300" />
+
+    <Button
+        android:id="@+id/trim_video_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Trim Video" />
+
+
+
+
+
+</LinearLayout>

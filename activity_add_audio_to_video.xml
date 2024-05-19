@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Video.AddAudioToVideoActivity">
+
+    <Button
+        android:id="@+id/select_files_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Video and Audio"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/video_path_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No video selected"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/audio_path_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No audio selected"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/add_audio_to_video_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Audio to Video"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
