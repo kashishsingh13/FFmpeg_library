@@ -183,3 +183,71 @@ class ChooseImageActivity : AppCompatActivity() {
 //        }
 //    }
 //}
+//select activity
+//class SelectImageActivity : AppCompatActivity() {
+//    private lateinit var binding: ActivitySelectImageBinding
+//
+//    private val cameraLauncher = registerForActivityResult(ActivityResultContracts.TakePicturePreview()) { bitmap ->
+//        if (bitmap != null) {
+//            val intent = Intent().apply {
+//                putExtra("imageBitmap", bitmap)
+//            }
+//            setResult(Activity.RESULT_OK, intent)
+//            finish()
+//        }
+//    }
+//
+//    private val galleryLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+//        if (uri != null) {
+//            val intent = Intent().apply {
+//                putExtra("imageUri", uri.toString())
+//            }
+//            setResult(Activity.RESULT_OK, intent)
+//            finish()
+//        }
+//    }
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        binding = ActivitySelectImageBinding.inflate(layoutInflater)
+//        setContentView(binding.root)
+//
+//        binding.camera.setOnClickListener {
+//            cameraLauncher.launch(null)
+//        }
+//
+//        binding.gallery.setOnClickListener {
+//            galleryLauncher.launch("image/*")
+//        }
+//    }
+//}
+
+//choose activity
+//class ChooseImageActivity : AppCompatActivity() {
+//    private lateinit var binding: ActivityChooseImageBinding
+//
+//    private val selectImageLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+//        if (result.resultCode == Activity.RESULT_OK) {
+//            result.data?.let { intent ->
+//                intent.getParcelableExtra<Bitmap>("imageBitmap")?.let { bitmap ->
+//                    binding.setImage.setImageBitmap(bitmap)
+//                }
+//                intent.getStringExtra("imageUri")?.let { uriString ->
+//                    val uri = Uri.parse(uriString)
+//                    binding.setImage.setImageURI(uri)
+//                }
+//            }
+//        }
+//    }
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        binding = ActivityChooseImageBinding.inflate(layoutInflater)
+//        setContentView(binding.root)
+//
+//        binding.chooseImage.setOnClickListener {
+//            val intent = Intent(this, SelectImageActivity::class.java)
+//            selectImageLauncher.launch(intent)
+//        }
+//    }
+//}
